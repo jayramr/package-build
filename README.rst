@@ -1,4 +1,4 @@
-### Docker Build instructions for python packaging. 
+##   Docker Build instructions for python packaging. 
 
 Clone the repository. 
 
@@ -38,7 +38,7 @@ Verify after uploading the docker image.
 docker pull <dockerhub-username>/<repository-name>:tagname
 ```
 
-### Conda based build instructions for python packaging.
+## Conda based build instructions for python packaging.
 
 Refer to bioconda/meta.yaml for the conda skeleton for this package. 
 As of now we would require to upload the python program and then create a versioned release v1.0
