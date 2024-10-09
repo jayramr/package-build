@@ -1,0 +1,35 @@
+{% set name = "<to-be-fill>" %}
+{% set version = "1.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "<to-be-fill>"
+  sha256: "<to-be-fill>"
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python >=3.9
+  run:
+    - python >=3.9
+    - Bio
+    - pillow
+    - svgutils
+    - plotly
+
+test:
+  commands:
+    - run_RF.py --help
+about:
+  home: "https://github.com/RasmussenLab/phamb"
+  license: "Academic and Non-Commercial Research Use"
+  license_file: LICENSE
+  summary: "Genomic analysis of Diploscapter pachys"
